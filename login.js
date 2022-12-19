@@ -23,6 +23,6 @@ button.addEventListener("click", (e) => {
   };
 
   if (username.value === uName && password.value === uPass) {
-    window.open("file:///C:/Users/Ernesto/Desktop/Miguel%20Peralta/la_cheveria/main.html", "_self");
+    window.open("file:///C:/Users/Ernesto/Desktop/Miguel%20Peralta/la_cheveria/index.html", "_self");
   }
 });
