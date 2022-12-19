@@ -1,19 +1,25 @@
 const url = "https://lacheveriaapi-production.up.railway.app/login"
 
-var uName = ""
-var uPass = ""
-
-fetch(url)
-  .then(response => response.json())
-  .then(data => {
-    uName = data[0].username
-    uPass = data[0].password
-  })
-  .catch(err => console.log(err))
-
 const username = document.getElementById("username");
 const password = document.getElementById("password");
 const button = document.getElementById("button");
+var uName = ""
+var uPass = ""
+
+const getData = () => {
+  fetch(url)
+  .then(response => response.json())
+  .then(data => {
+    for (let i = 0; i < data.length; i++) {
+      uName = data[i].username
+      uPass = data[i].password
+      if (username.value === uName && password.value === uPass) {
+        window.open("file:///C:/Users/Ernesto/Desktop/Miguel%20Peralta/la_cheveria/index.html", "_self");
+      }
+    }
+  })
+  .catch(err => console.log(err))
+}
 
 button.addEventListener("click", (e) => {
   e.preventDefault();
@@ -21,8 +27,5 @@ button.addEventListener("click", (e) => {
     username: username.value,
     password: password.value,
   };
-
-  if (username.value === uName && password.value === uPass) {
-    window.open("file:///C:/Users/Ernesto/Desktop/Miguel%20Peralta/la_cheveria/index.html", "_self");
-  }
+  getData()
 });
