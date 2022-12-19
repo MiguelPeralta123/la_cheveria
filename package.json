@@ -1,0 +1,27 @@
+{
+  "name": "la_cheveria",
+  "version": "1.0.0",
+  "description": "Tienda virtual de bebidas alcohólicas (LA CHEVERÍA)",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MiguelPeralta123/la_cheveria.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MiguelPeralta123/la_cheveria/issues"
+  },
+  "homepage": "https://github.com/MiguelPeralta123/la_cheveria#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql": "^2.18.1"
+  }
+}
