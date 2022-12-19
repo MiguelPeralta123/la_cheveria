@@ -1,7 +1,14 @@
-//import mysql from 'mysql'
-const mysql = require("mysql")
+const url = "https://lacheveriaapi-production.up.railway.app/login"
 
-//const mysql = require("mysql");
+fetch(url)
+.then(response => response.json())
+.then(data => {
+  console.log(data)
+})
+.catch(err => console.log(err))
+
+/*const mysql = require("mysql")
+
 const connection = mysql.createConnection({
   host: "localhost",
   user: "sa",
@@ -26,3 +33,4 @@ button.addEventListener("click", (e) => {
 
   console.log(data);
 });
+*/
