@@ -3,7 +3,7 @@ const url = "https://lacheveriaapi-production.up.railway.app/login"
 fetch(url)
   .then(response => response.json())
   .then(data => {
-    console.log(data.username)
+    console.log(data)
   })
   .catch(err => console.log(err))
 
