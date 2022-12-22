@@ -16,6 +16,7 @@ function cargarProductos() {
 }
 
 const url2 = "https://lacheveriaapi-production.up.railway.app/carrito";
+var arr = []
 
 const agregarCarrito = async (id) => {
   var nombre = "";
@@ -31,6 +32,8 @@ const agregarCarrito = async (id) => {
         marca = data[0].marca;
         precio = data[0].precio;
         cantidad = data[0].cantidad;
+        // agregar un for para recorrer arr y saber si el nombre y la marca ya se encuentran en el carrito para no volverlos a agregar
+        arr += nombre + marca
         postData(nombre, marca, precio, cantidad);
       } else {
         window.alert("Lo sentimos, el producto se ha agotado :(");
@@ -53,5 +56,5 @@ const postData = async (nombre, marca, precio, cantidad) => {
       }),
     });
     window.alert(`${username.value} añadido correctamente`);
-  } catch (error) {}
+  } catch (error) { }
 };
