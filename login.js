@@ -14,7 +14,7 @@ const getData = () => {
       uName = data[i].username
       uPass = data[i].password
       if (username.value === uName && password.value === uPass) {
-        window.open("file:///C:/Users/Ernesto/Desktop/Miguel%20Peralta/la_cheveria/index.html", "_self");
+        window.open("file:///C:/Users/ASUS/Desktop/la_cheveria/index.html", "_self");
       } else {
         window.alert("Favor de llenar todos los campos correctamente")
         return
